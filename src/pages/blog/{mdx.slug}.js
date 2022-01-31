@@ -2,9 +2,11 @@ import * as React from 'react'
 import Layout from '../../components/layout'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
 
 const BlogPost = ({ data }) => {
+  console.log("Data:");
+  console.log(data);
   const image = getImage(data.mdx.frontmatter.hero_image);
   console.log("Here is the image prop?");
   console.log(image);
@@ -15,6 +17,10 @@ const BlogPost = ({ data }) => {
         image={image}
         alt={data.mdx.frontmatter.hero_image_alt}
       />
+      {/* <StaticImage
+        src="../../images/Claude.jpeg"
+        alt="Claude"
+      /> */}
       <p>
         Photo Credit:{" "}
         <a href={data.mdx.frontmatter.hero_image_credit_link}>
