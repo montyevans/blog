@@ -1,12 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: "My Clog",
+    title: "Monty Evans",
+    description: "A Blog in Several Parts",
+    secret: "1729"
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-mdx",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
