@@ -9,8 +9,7 @@ const IndexPage = () => {
       <StaticImage
         alt="Clifford the Big Red Dog"
         src="../images/Claude.jpeg"
-      >
-      </StaticImage>
+      />
     </Layout>
   )
 }
