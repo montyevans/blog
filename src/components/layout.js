@@ -1,4 +1,6 @@
 import * as React from 'react'
+import { Helmet } from 'react-helmet'
+
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import {
   container,
@@ -6,8 +8,9 @@ import {
   navLinks,
   navLinkItem,
   navLinkText,
-  siteTitle
-} from './layout.module.css'
+  siteTitle,
+  name
+} from './layout.module.scss'
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -22,7 +25,10 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div className={container}>
-      <title>{pageTitle} | {data.site.siteMetadata.title}</title>
+      <Helmet>
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+      </Helmet>
+      <title>{pageTitle} || {data.site.siteMetadata.title}</title>
       <header className={siteTitle} >{data.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>

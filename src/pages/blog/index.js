@@ -17,12 +17,11 @@ const BlogPage = (props) => {
                   {node.frontmatter.name}
                 </Link>
               </h2>
-              <p>Posted: {node.frontmatter.datePublished}</p>
+              <p>{node.frontmatter.datePublished}</p>
             </article>
           ))
       }
       </ul>
-      <p>My cool posts will go in here</p>
     </Layout>
   )
 

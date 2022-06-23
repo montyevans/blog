@@ -8,8 +8,7 @@ const BlogPost = ({ data }) => {
   console.log("Data:");
   console.log(data);
   const image = getImage(data.mdx.frontmatter.hero_image);
-  console.log("Here is the image prop?");
-  console.log(image);
+
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.datePublished}</p>
