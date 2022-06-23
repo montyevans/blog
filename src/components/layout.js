@@ -9,8 +9,11 @@ import {
   navLinkItem,
   navLinkText,
   siteTitle,
-  name
+  grayLine,
+  footer,
+  footerImage
 } from './layout.module.scss'
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image'
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -49,12 +52,23 @@ const Layout = ({ pageTitle, children }) => {
           </li>
         </ul>
       </nav>
+      <div className={grayLine}></div>
       <main>
         <h1 className={heading}>{pageTitle}</h1>
         {children}
       </main>
+      <div className={grayLine}></div>
+      <footer className={footer}>
+        <Link to="https://twitter.com/montymevans">
+          <StaticImage
+            className={footerImage}
+            src="../images/twitter.png"
+          />
+        </Link>
+      </footer>
     </div>
   )
+
 }
 
 export default Layout

@@ -22,12 +22,22 @@ $sans-serif: -apple-system, BlinkMacSystemFont,
 }
 .container {
   margin: auto;
-  max-width: 500px;
+  max-width: 700px;
   font-family: $sans-serif;
 }
 
 .container > main > ul {
   padding-left: 0
+}
+
+.container a {
+  color: darkgray;
+}
+
+.grayLine {
+  height: 1px;
+  width: 100%;
+  background-color: lightgray;
 }
 
 .postDate {
@@ -48,7 +58,7 @@ $sans-serif: -apple-system, BlinkMacSystemFont,
   padding-right: 2rem;
 }
 .nav-link-text {
-  color: black;
+  color: black !important;
   text-decoration: none;
   font-size: 1.25rem;
 }
@@ -59,4 +69,49 @@ $sans-serif: -apple-system, BlinkMacSystemFont,
 
 .site-title {
   @include site-title-heaton
+}
+
+.fullPostTitle {
+  margin-bottom: 0;
+}
+
+.footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.footerImage{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+p, ol {
+  color: black;
+  font-size: 1.25rem;
+  line-height: 1.6rem;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: gray;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+blockquote {
+  // border-left-color: solid black;
+  border-left: 0.75rem solid darkgray;
+  padding-left: 1.5rem;
+  margin-left: 0;
+  font-style: italic;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

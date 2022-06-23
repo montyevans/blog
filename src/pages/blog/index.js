@@ -24,8 +24,6 @@ const BlogPage = (props) => {
       </ul>
     </Layout>
   )
-
-
 }
 
 export const query = graphql`
