@@ -115,3 +115,10 @@ h2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+
+img + em {
+  color: gray;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+}

@@ -54,7 +54,6 @@ const Layout = ({ pageTitle, children }) => {
       </nav>
       <div className={grayLine}></div>
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
         {children}
       </main>
       <div className={grayLine}></div>

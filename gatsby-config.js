@@ -7,8 +7,22 @@ module.exports = {
   plugins: [
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
+
     "gatsby-plugin-sharp",
-    "gatsby-plugin-mdx",
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
     {
@@ -16,7 +30,7 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/blog`,
-      }
+      },
     }
   ],
 };
